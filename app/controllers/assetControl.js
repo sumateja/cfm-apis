@@ -30,12 +30,13 @@ module.exports={
     },
 
     retrieve:(req,res)=>{
-        AssetModel.find(req.boquery.id)
+        AssetModel.find(req.query.id)
         .then(result=>{
             if(!result) res.json({success:false,result: "No such Asset exisits"})
             res.json(result)  
         })
         .catch(err=>{
+
             res.json({success:false,result:err})
         })
     },
