@@ -18,6 +18,9 @@ const AssetControl=require('./app/controllers/assetControl')
 //Routes
 
 app.post('/api/vehicle/create',AssetControl.create)
+app.post('/api/vehicle/update',AssetControl.update)
+app.post('/api/vehicle/retrieve',AssetControl.retrieve)
+app.post('/api/vehicle/delete',AssetControl.delete)
 
 //Start Server
 
